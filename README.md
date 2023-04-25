@@ -2,21 +2,12 @@
 
 This demo helps observe the latency characteristics of querying different popular data services from varying compute locations.
 
-https://edge-data-latency.vercel.app
+https://nubo-edge-data-latency.vercel.app
 
 ## Providers
 
-- Convex (SDK)
-- Fauna
-- Grafbase (GraphQL)
-- Neon
+- Nubo
 - PlanetScale (Kysely + Serverless SDK)
-- Shopify (Storefront GraphQL API)
-- Supabase (supabase-js)
-- Tigris
-- Turso
-- Upstash (SDK)
-- Xata (TypeScript SDK)
 
 ## Testing Methodology
 
