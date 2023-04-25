@@ -3,4 +3,4 @@ export const config = {
   regions: ['iad1'],
 };
 
-export { default } from './tigris-global';
+export { default } from './nubo-global';

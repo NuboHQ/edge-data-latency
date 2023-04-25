@@ -1,20 +1,24 @@
-import { Redis } from "@upstash/redis"
-import { NextRequest as Request, NextResponse as Response } from "next/server";
+import { NextRequest as Request, NextResponse as Response } from 'next/server';
+import { drizzle } from 'drizzle-orm/planetscale-serverless';
+import { connect } from 'nubo';
+import { employees } from '@/lib/schema';
+
+const connection = connect({ url: process.env.DATABASE_URL });
+const db = drizzle(connection);
 
 export const config = {
-  runtime: "edge",
+  runtime: 'edge',
 };
 
-const redis = Redis.fromEnv()
 const start = Date.now();
 
 export default async function api(req: Request) {
-  const count = toNumber(new URL(req.url).searchParams.get("count"));
+  const count = toNumber(new URL(req.url).searchParams.get('count'));
   const time = Date.now();
 
   let data = null;
   for (let i = 0; i < count; i++) {
-    data = await redis.get("employees")
+    data = await db.select().from(employees).limit(10);
   }
 
   return Response.json(
@@ -23,13 +27,13 @@ export default async function api(req: Request) {
       queryDuration: Date.now() - time,
       invocationIsCold: start === time,
       invocationRegion:
-        (req.headers.get("x-vercel-id") ?? "").split(":")[1] || null,
+        (req.headers.get('x-vercel-id') ?? '').split(':')[1] || null,
     },
     {
       headers: {
-        "x-edge-is-cold": start === time ? "1" : "0",
+        'x-edge-is-cold': start === time ? '1' : '0',
       },
-    }
+    },
   );
 }
 
