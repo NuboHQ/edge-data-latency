@@ -1917,10 +1917,10 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
-nubo@^0.0.12-alpha:
-  version "0.0.12-alpha"
-  resolved "https://registry.yarnpkg.com/nubo/-/nubo-0.0.12-alpha.tgz#ee44ea056ebd32a658a827d9fe79112dcf9994f0"
-  integrity sha512-SJOgFSes8R5UghiU65xDQgrVctlq0goh/rfnS6DQZxSBKtQ0FEP/aLk/6sxWdmXJTM9mupNOCBNmLvZ1HBblEw==
+nubo@^0.0.13-alpha:
+  version "0.0.13-alpha"
+  resolved "https://registry.yarnpkg.com/nubo/-/nubo-0.0.13-alpha.tgz#27b3e9d5606eb1aaa081d2fe11c4506fd00839c2"
+  integrity sha512-zjlicRvMpRS0HmBVEDeetbPBSGMGd+f+ynyGC3zL5UHXKayPSR3rBLjjZFsfBqhrcqzAyRQd6Y6logatB9oKZg==
   dependencies:
     "@planetscale/database" "^1.7.0"
 

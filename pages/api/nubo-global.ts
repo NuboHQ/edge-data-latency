@@ -3,7 +3,7 @@ import { drizzle } from 'drizzle-orm/planetscale-serverless';
 import { connect } from 'nubo';
 import { employees } from '@/lib/schema';
 
-const connection = connect({ url: process.env.DATABASE_URL });
+const connection = connect();
 const db = drizzle(connection);
 
 export const config = {
