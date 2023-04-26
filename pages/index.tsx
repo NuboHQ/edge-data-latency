@@ -12,7 +12,7 @@ export default function Page() {
   const [shouldTestGlobal, setShouldTestGlobal] = useState(true);
   const [shouldTestRegional, setShouldTestRegional] = useState(true);
   const [queryCount, setQueryCount] = useState(1);
-  const [dataService, setDataService] = useState('');
+  const [dataService, setDataService] = useState('nubo');
   const [data, setData] = useState({
     regional: [],
     global: [],
@@ -120,6 +120,7 @@ export default function Page() {
               className="max-w-xs"
               placeholder="Select Database"
               onValueChange={(v) => setDataService(v)}
+              defaultValue="nubo"
             >
               <DropdownItem data-testid="nubo" value="nubo" text="Nubo" />
             </Dropdown>
