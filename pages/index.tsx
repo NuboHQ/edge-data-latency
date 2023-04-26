@@ -122,11 +122,6 @@ export default function Page() {
               onValueChange={(v) => setDataService(v)}
             >
               <DropdownItem data-testid="nubo" value="nubo" text="Nubo" />
-              <DropdownItem
-                data-testid="planetscale"
-                value="planetscale"
-                text="Planetscale"
-              />
             </Dropdown>
           </div>
         </div>
