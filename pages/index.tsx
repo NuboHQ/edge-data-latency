@@ -120,7 +120,7 @@ export default function Page() {
               className="max-w-xs"
               placeholder="Select Database"
               onValueChange={(v) => setDataService(v)}
-              defaultValue="nubo"
+              defaultValue={dataService}
             >
               <DropdownItem data-testid="nubo" value="nubo" text="Nubo" />
             </Dropdown>
